@@ -3,7 +3,7 @@ const LanguageService = require('./language-service')
 const { requireAuth } = require('../middleware/jwt-auth')
 const languageRouter = express.Router()
 const jsonBodyParser = express.json()
-const { LinkedListService } = require('../LinkedList/LinkedList-service')
+const { LinkedListService } = require('../linkedlist/linkedlist-service')
 
 
 languageRouter
