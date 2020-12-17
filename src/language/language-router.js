@@ -67,6 +67,8 @@ languageRouter
       res
         .status(200)
         .json({
+          nextCharacter: head.character,
+          nextPinyin: head.pinyin,
           nextWord: head.original,
           totalScore: score,
           wordCorrectCount: head.correct_count,

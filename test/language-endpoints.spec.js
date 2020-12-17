@@ -129,6 +129,8 @@ describe('Language Endpoints', function () {
         .set('Authorization', helpers.makeAuthHeader(testUser))
         .expect(200)
         .expect({
+          nextCharacter: headWord.character,
+          nextPinyin: headWord.pinyin,
           nextWord: headWord.original,
           totalScore: 0,
           wordCorrectCount: 0,
@@ -181,6 +183,8 @@ describe('Language Endpoints', function () {
           .send(incorrectPostBody)
           .expect(200)
           .expect({
+            nextCharacter: testLanguagesWords[1].character,
+            nextPinyin: testLanguagesWords[1].pinyin,
             nextWord: testLanguagesWords[1].original,
             totalScore: 0,
             wordCorrectCount: 0,
@@ -201,6 +205,8 @@ describe('Language Endpoints', function () {
           .set('Authorization', helpers.makeAuthHeader(testUser))
           .send(incorrectPostBody)
           .expect({
+            nextCharacter: testLanguagesWords[0].character,
+            nextPinyin: testLanguagesWords[0].pinyin,
             nextWord: testLanguagesWords[0].original,
             totalScore: 0,
             wordCorrectCount: 0,
@@ -226,6 +232,8 @@ describe('Language Endpoints', function () {
           .send(correctPostBody)
           .expect(200)
           .expect({
+            nextCharacter: testLanguagesWords[1].character,
+            nextPinyin: testLanguagesWords[1].pinyin,
             nextWord: testLanguagesWords[1].original,
             totalScore: 1,
             wordCorrectCount: 0,
@@ -252,6 +260,8 @@ describe('Language Endpoints', function () {
           .set('Authorization', helpers.makeAuthHeader(testUser))
           .send(correctPostBody)
           .expect({
+            nextCharacter: testLanguagesWords[2].character,
+            nextPinyin: testLanguagesWords[2].pinyin,
             nextWord: testLanguagesWords[2].original,
             totalScore: 2,
             wordCorrectCount: 0,
@@ -268,6 +278,8 @@ describe('Language Endpoints', function () {
           .set('Authorization', helpers.makeAuthHeader(testUser))
           .send(correctPostBody)
           .expect({
+            nextCharacter: testLanguagesWords[0].character,
+            nextPinyin: testLanguagesWords[0].pinyin,
             nextWord: testLanguagesWords[0].original,
             totalScore: 3,
             wordCorrectCount: 1,

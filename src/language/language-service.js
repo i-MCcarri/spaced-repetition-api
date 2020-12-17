@@ -21,6 +21,8 @@ const LanguageService = {
       .select(
         'id',
         'language_id',
+        'character',
+        'pinyin',
         'original',
         'translation',
         'next',
@@ -38,6 +40,8 @@ const LanguageService = {
       .join('language', { 'word.id': 'language.head' })
       .select(
         'word.id',
+        'word.character',
+        'word.pinyin',
         'word.original',
         'word.translation',
         'word.correct_count',
@@ -101,6 +105,8 @@ const LanguageService = {
         .where({ id: language_id })
 
       return {
+        nextCharacter: nodes.newHead.character,
+        nextPinyin:nodes.newHead.character,
         nextWord: nodes.newHead.original,
         wordIncorrectCount: nodes.newHead.incorrect_count,
         wordCorrectCount: nodes.newHead.correct_count,
@@ -145,6 +151,8 @@ const LanguageService = {
         .where({ id: language_id })
 
       return {
+        nextCharacter: nodes.newHead.character,
+        nextPinyin: nodes.newHead.pinyin,
         nextWord: nodes.newHead.original,
         wordIncorrectCount: nodes.newHead.incorrect_count,
         wordCorrectCount: nodes.newHead.correct_count,
