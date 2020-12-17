@@ -47,9 +47,7 @@ languageRouter
 
 languageRouter
   .get('/head', async (req, res, next) => {
-
     try {
-
       let lang = await LanguageService.getLanguageHead(
         req.app.get('db'),
         req.language.id
