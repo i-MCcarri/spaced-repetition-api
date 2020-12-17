@@ -1,4 +1,4 @@
-const LinkedListService = require('../LinkedList/LinkedList-service')
+const LinkedListService = require('../linkedlist/linkedlist-service')
 
 const LanguageService = {
   getUsersLanguage(db, user_id) {
