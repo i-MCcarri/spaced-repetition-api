@@ -156,25 +156,26 @@ start the application
 
 ## DEMOS
 
-### Landing Page
+### Registration Page
 
-<img src='https://github.com/i-MCcarri/Diglot/blob/main/src/images/splash.png?raw=true'/>
+<img src='./src/images/reg.png'/>
 
-### Registration
+### Login Page
 
-<img src='https://github.com/i-MCcarri/Diglot/blob/main/src/images/reg.png?raw=true'/>
+<img src='./src/images/login.png'/>
 
-### Login
+### Dashboard View
 
-<img src='https://github.com/i-MCcarri/Diglot/blob/main/src/images/login.png?raw=true'/>
+<img src='./src/images/dashboard.png'/>
 
-### Dashboard
+### Learning Page
 
-<img src='https://github.com/i-MCcarri/Diglot/blob/main/src/images/home.png?raw=true'/>
+<img src='./src/images/learn.png'/>
 
-### Learning
+### Result Page
 
-<img src='https://github.com/i-MCcarri/Diglot/blob/main/src/images/toolkit.png?raw=true'/>
+<img src='./src/images/result.png'/>
+
 
 ## Scripts
 
