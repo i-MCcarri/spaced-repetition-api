@@ -8,7 +8,6 @@ const jsonBodyParser = express.json()
 userRouter
   .post('/', jsonBodyParser, async (req, res, next) => {
     const { password, username, name } = req.body
-    console.log('inside user router post: ', req.body)
     for (const field of ['name', 'username', 'password'])
       if (!req.body[field])
         return res.status(400).json({
@@ -36,7 +35,7 @@ userRouter
         password: hashedPassword,
         name,
       }
-      console.log('new user data: ', newUser)
+  
       const user = await UserService.insertUser(
         req.app.get('db'),
         newUser

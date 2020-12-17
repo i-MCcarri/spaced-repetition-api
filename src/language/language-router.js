@@ -14,7 +14,7 @@ languageRouter
         req.app.get('db'),
         req.user.id,
       )
-        console.log('backend ', language, req.user.id)
+      
       if (!language)
         return res.status(404).json({
           error: `You don't have any languages`,
